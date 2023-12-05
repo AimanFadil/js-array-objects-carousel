@@ -37,17 +37,23 @@ successivo.addEventListener('click', function() {
 
 let imgCorrente = 0;
 
-const items = document.getElementsByClassName('items')
+const items = document.querySelector('.item.active')
 function mostraImgCorrente() {
-    const stampa = document.createElement('div')
-    stampa.classList.add('item active')
     
+    /* let stampaImg = document.createElement('img')
+    stampaImg.innerText = `src="./${images[imgCorrente].image}`;
+    
+    let div = document.document.createElement('div')
+    div.classList.add('position-absolute bottom-50 text-right color-white padding-text')
 
-    let stampaImgTesto = `<div class="position-absolute bottom-50 text-right color-white padding-text"><h2>${images.title}</h2><h5>${images.text}</h5></div>`
-    stampa.innerHTML = stampaImgTesto
+    let title = `<h2>${images[imgCorrente].title}</h2>`
+    let text = `<h5>${images[imgCorrente].text}</h5>`
+
+    div.innerHTML = title + "<br>" + text; */
 
     console.log('Immagine corrente:', images[imgCorrente]);
-}
+} 
+
 
 let precedente = document.querySelector('.prev');
 let successivo = document.querySelector('.next');
@@ -69,3 +75,6 @@ successivo.addEventListener('click', function() {
 });
 
 
+/* let stampaTesto = `<div class="position-absolute bottom-50 text-right color-white padding-text"><h2>${images.title}</h2><h5>${images.text}</h5></div>`
+stampa.innerHTML = stampaTesto 
+ */
