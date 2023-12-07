@@ -22,38 +22,20 @@ const images = [
     }
 ];
 
-/* let precedente = document.querySelector('.prev');
-let successivo = document.querySelector('.next');
-
-precedente.addEventListener('click', function() {
-       
-    console.log('Elemento con classe "prev" cliccato');
-});
-
-successivo.addEventListener('click', function() {
-        
-    console.log('Elemento con classe "next" cliccato');
-}); */
 
 let imgCorrente = 0;
 
-const items = document.querySelector('.item.active')
+const currentImage = document.querySelector('img');
+const currentTitle = document.querySelector('h2');
+const currentText = document.querySelector('h5');
+
 function mostraImgCorrente() {
-    
-    /* let stampaImg = document.createElement('img')
-    stampaImg.innerText = `src="./${images[imgCorrente].image}`;
-    
-    let div = document.document.createElement('div')
-    div.classList.add('position-absolute bottom-50 text-right color-white padding-text')
-
-    let title = `<h2>${images[imgCorrente].title}</h2>`
-    let text = `<h5>${images[imgCorrente].text}</h5>`
-
-    div.innerHTML = title + "<br>" + text; */
+    currentImage.src = images[imgCorrente].image;
+    currentTitle.innerText = images[imgCorrente].title;
+    currentText.innerText = images[imgCorrente].text;
 
     console.log('Immagine corrente:', images[imgCorrente]);
 } 
-
 
 let precedente = document.querySelector('.prev');
 let successivo = document.querySelector('.next');
@@ -72,9 +54,7 @@ successivo.addEventListener('click', function() {
         imgCorrente = 0;
     }
     mostraImgCorrente();
-});
+})
 
 
-/* let stampaTesto = `<div class="position-absolute bottom-50 text-right color-white padding-text"><h2>${images.title}</h2><h5>${images.text}</h5></div>`
-stampa.innerHTML = stampaTesto 
- */
+
